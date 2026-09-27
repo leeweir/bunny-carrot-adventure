@@ -28,3 +28,7 @@ main>.intro{grid-row:1}main>.game-layout{grid-row:2}main>footer{grid-row:3;heigh
 .board>.tile:active:not(:disabled){transform:none}
 /* These are fixed game surfaces, not scroll containers: focus must not pan them. */
 .play-card,.board{overflow:clip}
+
+/* Disable double-tap zoom, including gaps between controls, without disabling pinch zoom.
+   The board keeps its existing touch-action rules for swipe movement. */
+html,body,dialog{touch-action:manipulation}
